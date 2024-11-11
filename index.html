@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="recipe1.css">
+</head>
+<body>
+
+<!-- Loading Page with Background Video -->
+<div id="loadingPage">
+  <video autoplay muted loop id="backgroundVideo">
+    <source src="smartcook1.mp4" type="video/mp4"> <!-- Replace with your video file -->
+  </video>
+</div>
+
+<!-- Main Page -->
+<div id="mainPage" style="display:none;">
+  <div class="center-search">
+    <div class="input-wrapper">
+      <input type="text" id="mainIngredientInput" placeholder="Enter ingredient" onkeydown="startSearch(event)">
+    </div>
+  </div>
+  <div id="results" style="max-height: 70vh; overflow-y: auto;"></div>
+</div>
+
+<!-- Results Page -->
+<div id="resultsPage" style="display:none;">
+  <div class="overlay" id="overlay"></div>
+  <div class="top-search">
+    <div class="input-wrapper">
+      <input type="text" id="ingredientInput" placeholder="Search for another ingredient" onkeydown="searchRecipes(event)">
+    </div>
+  </div>
+  <div id="results" style="max-height: 70vh; overflow-y: auto;"></div>
+  <div id="recipes"></div>
+</div>
+<script src="recipe1.js"></script>
+
+</body>
+</html>
