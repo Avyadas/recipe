@@ -1,0 +1,179 @@
+
+/* Basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+@media(max-width:768px){
+  .container{
+    width:95%;
+  }
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+#loadingPage {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+}
+
+#backgroundVideo {
+  background-size: cover;
+  /*background-position: center;*/
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position:absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover; /* Ensures the video covers the screen without distortion */
+  z-index: -1;
+}
+
+#mainPage {
+  background-image: url('Smart\ Cook\ Website.png'); /* Update with your actual image path */
+  object-fit: contain;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position:absolute;
+  display: flex;
+}
+
+#resultsPage {
+  background-image: url(5.png);
+  position: absolute;
+  object-fit: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+/* Centered search bar on the main page */
+.center-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+}
+.top-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  overflow: hidden;
+  background-color: #fff;
+  /*border: 2px solid #000;*/
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+  padding: 12px;
+  font-size: 16px;
+  width: 1000px;
+  border: none;
+  outline: none;
+  border-radius: 50px 0 0 50px; /* Rounded left corners */
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  width: 1000px;
+  border-radius: 25px 0 0 25px;
+}
+
+.search-btn {
+  padding: 8px;
+  margin: 3px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.search-btn .search-icon {
+  font-size: 20px;
+  color: #fff
+}
+
+.search-btn:hover {
+  transform: scale(1.05);
+}
+
+#recipes {
+  margin-top: 30px;
+  width: 100vw;
+  padding: 0 10%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recipe-item {
+  text-align: center;
+  margin: 10px;
+  max-width: 100vw;
+}
+
+.recipe-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.recipe-box {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  background: rgba(255,255,255, 0.5);
+  width: 150px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  /*margin-top: 10px;*/
+  font-size: 16px;
+  border-radius: 5px;
+  color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.recipe-item:hover .recipe-image {
+  transform: scale(1.1);
+}
+
+.recipe-item:hover .recipe-box {
+  transform: scale(1.1);
+}
